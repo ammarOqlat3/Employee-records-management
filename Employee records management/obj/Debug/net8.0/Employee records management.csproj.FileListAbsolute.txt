@@ -1,0 +1,34 @@
+C:\Users\ammar\OneDrive\Desktop\asp.netOrange\Employee records management\Employee records management\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\ammar\OneDrive\Desktop\asp.netOrange\Employee records management\Employee records management\bin\Debug\net8.0\appsettings.json
+C:\Users\ammar\OneDrive\Desktop\asp.netOrange\Employee records management\Employee records management\bin\Debug\net8.0\Employee records management.staticwebassets.runtime.json
+C:\Users\ammar\OneDrive\Desktop\asp.netOrange\Employee records management\Employee records management\bin\Debug\net8.0\Employee records management.staticwebassets.endpoints.json
+C:\Users\ammar\OneDrive\Desktop\asp.netOrange\Employee records management\Employee records management\bin\Debug\net8.0\Employee records management.exe
+C:\Users\ammar\OneDrive\Desktop\asp.netOrange\Employee records management\Employee records management\bin\Debug\net8.0\Employee records management.deps.json
+C:\Users\ammar\OneDrive\Desktop\asp.netOrange\Employee records management\Employee records management\bin\Debug\net8.0\Employee records management.runtimeconfig.json
+C:\Users\ammar\OneDrive\Desktop\asp.netOrange\Employee records management\Employee records management\bin\Debug\net8.0\Employee records management.dll
+C:\Users\ammar\OneDrive\Desktop\asp.netOrange\Employee records management\Employee records management\bin\Debug\net8.0\Employee records management.pdb
+C:\Users\ammar\OneDrive\Desktop\asp.netOrange\Employee records management\Employee records management\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\ammar\OneDrive\Desktop\asp.netOrange\Employee records management\Employee records management\obj\Debug\net8.0\Employee records management.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ammar\OneDrive\Desktop\asp.netOrange\Employee records management\Employee records management\obj\Debug\net8.0\Employee records management.AssemblyInfoInputs.cache
+C:\Users\ammar\OneDrive\Desktop\asp.netOrange\Employee records management\Employee records management\obj\Debug\net8.0\Employee records management.AssemblyInfo.cs
+C:\Users\ammar\OneDrive\Desktop\asp.netOrange\Employee records management\Employee records management\obj\Debug\net8.0\Employee records management.csproj.CoreCompileInputs.cache
+C:\Users\ammar\OneDrive\Desktop\asp.netOrange\Employee records management\Employee records management\obj\Debug\net8.0\Employee records management.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\ammar\OneDrive\Desktop\asp.netOrange\Employee records management\Employee records management\obj\Debug\net8.0\Employee records management.RazorAssemblyInfo.cache
+C:\Users\ammar\OneDrive\Desktop\asp.netOrange\Employee records management\Employee records management\obj\Debug\net8.0\Employee records management.RazorAssemblyInfo.cs
+C:\Users\ammar\OneDrive\Desktop\asp.netOrange\Employee records management\Employee records management\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\ammar\OneDrive\Desktop\asp.netOrange\Employee records management\Employee records management\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\ammar\OneDrive\Desktop\asp.netOrange\Employee records management\Employee records management\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\ammar\OneDrive\Desktop\asp.netOrange\Employee records management\Employee records management\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\ammar\OneDrive\Desktop\asp.netOrange\Employee records management\Employee records management\obj\Debug\net8.0\scopedcss\bundle\Employee records management.styles.css
+C:\Users\ammar\OneDrive\Desktop\asp.netOrange\Employee records management\Employee records management\obj\Debug\net8.0\scopedcss\projectbundle\Employee records management.bundle.scp.css
+C:\Users\ammar\OneDrive\Desktop\asp.netOrange\Employee records management\Employee records management\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\ammar\OneDrive\Desktop\asp.netOrange\Employee records management\Employee records management\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Users\ammar\OneDrive\Desktop\asp.netOrange\Employee records management\Employee records management\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\ammar\OneDrive\Desktop\asp.netOrange\Employee records management\Employee records management\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\ammar\OneDrive\Desktop\asp.netOrange\Employee records management\Employee records management\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\ammar\OneDrive\Desktop\asp.netOrange\Employee records management\Employee records management\obj\Debug\net8.0\Employee records management.dll
+C:\Users\ammar\OneDrive\Desktop\asp.netOrange\Employee records management\Employee records management\obj\Debug\net8.0\refint\Employee records management.dll
+C:\Users\ammar\OneDrive\Desktop\asp.netOrange\Employee records management\Employee records management\obj\Debug\net8.0\Employee records management.pdb
+C:\Users\ammar\OneDrive\Desktop\asp.netOrange\Employee records management\Employee records management\obj\Debug\net8.0\Employee records management.genruntimeconfig.cache
+C:\Users\ammar\OneDrive\Desktop\asp.netOrange\Employee records management\Employee records management\obj\Debug\net8.0\ref\Employee records management.dll
+C:\Users\ammar\OneDrive\Desktop\asp.netOrange\Employee records management\Employee records management\obj\Debug\net8.0\Employee records management.csproj.AssemblyReference.cache
