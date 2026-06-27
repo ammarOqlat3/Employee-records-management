@@ -12,6 +12,8 @@ namespace EmployeeRecordsManagement.Models{
         {
             PageIndex=pageIndex;
             TotalPages=(int)Math.Ceiling(count/(double)pageSize);
+            TotalItems=count;
+            PageSize=pageSize;
             Items=items;
         }
         public bool HasPreviousPage => (PageIndex > 1);

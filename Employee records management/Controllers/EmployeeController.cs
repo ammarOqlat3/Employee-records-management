@@ -16,13 +16,26 @@ namespace EmployeeRecordsManagement.Controllers
             _employeeRepository = employeeRepository;
             
         }
-        public async Task<IActionResult> Index(string searchString, string sortOrder,int pageNumber)
+        public async Task<IActionResult> Index(string searchString, string sortOrder, string currentFilter, int pageNumber)
         {
             var employees= _employeeRepository.GetAllAsync();
+            ViewData["CurrentSort"] = sortOrder;
             if (!string.IsNullOrEmpty(searchString))
-            { 
-                employees = employees.Where(e => e.FirstName.Contains(searchString.ToLower())||
-                e.LastName.Contains(searchString.ToLower()));
+            {
+                pageNumber = 1;
+            }
+            else
+            {
+                searchString = currentFilter;
+            }
+            ViewData["CurrentFilter"] = searchString;
+
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                var normalizedSearch = searchString.ToLower();
+                employees = employees.Where(e =>
+                    e.FirstName.ToLower().Contains(normalizedSearch) ||
+                    e.LastName.ToLower().Contains(normalizedSearch));
             }
             ViewData["NameSortParam"] = string.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
             ViewData["DateOfBirthSortParm"] = sortOrder == "date_asc" ? "date_desc" : "date_asc";

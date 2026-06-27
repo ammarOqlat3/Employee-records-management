@@ -1,27 +1,84 @@
-﻿﻿@{
-ViewData["Title"] = "Home Page";
+@{
+    ViewData["Title"] = "Dashboard";
 }
 
-<div class="container p-4">
-    <div class="row">
-        <div class="col-md-4">
-            <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Employees</h5>
-                    <p class="card-text">Get employee details</p>
-                    <a asp-controller="Employee" asp-action="Index" class="btn btn-dark">Click here!</a>
-                </div>
-            </div>
+<section class="page-hero">
+    <div>
+        <span class="eyebrow">Employee Records Management</span>
+        <h2>Run people data with clarity.</h2>
+        <p>
+            A cleaner workspace for managing employee profiles, departments, status, and quick daily updates from one focused console.
+        </p>
+        <div class="hero-actions">
+            <a asp-controller="Employee" asp-action="Index" class="btn btn-primary">
+                <i class="bi bi-people"></i>
+                View Employees
+            </a>
+            <a asp-controller="Department" asp-action="Index" class="btn btn-outline-dark">
+                <i class="bi bi-building"></i>
+                View Departments
+            </a>
         </div>
-        <div class="col-md-4">
-            <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Department</h5>
-                    <p class="card-text">Get department details</p>
-                    <a asp-controller="Department" asp-action="Index" class="btn btn-dark">Click here!</a>
-                </div>
-            </div>
-        </div>
-
     </div>
-</div>
+    <div class="hero-metric">
+        <div>
+            <span class="metric-number">HR</span>
+            <span class="metric-label">Records hub</span>
+        </div>
+        <p class="mb-0">Organized profiles, searchable lists, and clean forms built for everyday admin work.</p>
+    </div>
+</section>
+
+<section class="stats-grid" aria-label="System highlights">
+    <div class="stat-card">
+        <span class="stat-icon"><i class="bi bi-person-vcard"></i></span>
+        <div>
+            <strong>360</strong>
+            <span>Profile view style</span>
+        </div>
+    </div>
+    <div class="stat-card">
+        <span class="stat-icon"><i class="bi bi-search"></i></span>
+        <div>
+            <strong>Fast</strong>
+            <span>Employee search</span>
+        </div>
+    </div>
+    <div class="stat-card">
+        <span class="stat-icon"><i class="bi bi-diagram-3"></i></span>
+        <div>
+            <strong>Teams</strong>
+            <span>Department control</span>
+        </div>
+    </div>
+    <div class="stat-card">
+        <span class="stat-icon"><i class="bi bi-check2-circle"></i></span>
+        <div>
+            <strong>Status</strong>
+            <span>Active tracking</span>
+        </div>
+    </div>
+</section>
+
+<section class="action-grid">
+    <article class="action-card">
+        <div>
+            <span class="eyebrow">Employees</span>
+            <h3>Manage employee records</h3>
+            <p>Browse, search, edit, and remove employee profiles with a cleaner table layout.</p>
+        </div>
+        <a asp-controller="Employee" asp-action="Index" class="btn btn-primary btn-icon" aria-label="Open employees">
+            <i class="bi bi-arrow-right"></i>
+        </a>
+    </article>
+    <article class="action-card">
+        <div>
+            <span class="eyebrow">Departments</span>
+            <h3>Structure your teams</h3>
+            <p>Create and maintain department names so employee records stay organized.</p>
+        </div>
+        <a asp-controller="Department" asp-action="Index" class="btn btn-primary btn-icon" aria-label="Open departments">
+            <i class="bi bi-arrow-right"></i>
+        </a>
+    </article>
+</section>

@@ -1,37 +1,101 @@
-﻿@model IEnumerable<DepartmentViewModel>
+@model IEnumerable<DepartmentViewModel>
 @{
-    ViewData["Title"] = "All departments";
+    ViewData["Title"] = "Departments";
+    var departmentCount = Model.Count();
 }
 
-<div class="container p-4">
-    <div class="row">
-        <div class="col-md-12">
-            <h3 class="p-4">All Departments</h3>
+<section class="page-hero">
+    <div>
+        <span class="eyebrow">Organization Structure</span>
+        <h2>Departments with a cleaner command center.</h2>
+        <p>Keep teams organized with a focused department list and quick controls for adding, editing, or removing departments.</p>
+        <div class="hero-actions">
+            <a asp-controller="Department" asp-action="Add" class="btn btn-primary">
+                <i class="bi bi-building-add"></i>
+                Add Department
+            </a>
+            <a asp-controller="Employee" asp-action="Index" class="btn btn-outline-dark">
+                <i class="bi bi-people"></i>
+                Employee Directory
+            </a>
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-12 p-4">
-            <table class="table">
-                <thead>
+    <div class="hero-metric">
+        <div>
+            <span class="metric-number">@departmentCount</span>
+            <span class="metric-label">department records</span>
+        </div>
+        <p class="mb-0">Simple team structure makes employee records easier to maintain.</p>
+    </div>
+</section>
+
+<section class="panel">
+    <div class="panel-header">
+        <div>
+            <span class="eyebrow">Departments</span>
+            <h3 class="panel-title">All departments</h3>
+        </div>
+        <a asp-controller="Department" asp-action="Add" class="btn btn-primary">
+            <i class="bi bi-plus-lg"></i>
+            New Department
+        </a>
+    </div>
+
+    <div class="table-wrap">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Department</th>
+                    <th scope="col">Record Health</th>
+                    <th scope="col" class="text-end">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (!Model.Any())
+                {
                     <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Department</th>
-                        <th></th>
-                        <th></th>
+                        <td colspan="4">
+                            <div class="empty-state">
+                                <i class="bi bi-building fs-1 d-block mb-2"></i>
+                                No departments yet. Create the first department to start organizing employees.
+                            </div>
+                        </td>
                     </tr>
-                </thead>
-                <tbody>
+                }
+                else
+                {
                     @foreach (var department in Model)
                     {
+                        var initial = string.IsNullOrWhiteSpace(department.Name) ? "D" : department.Name.Substring(0, 1).ToUpper();
                         <tr>
-                            <th scope="row">@department.DepartmentId</th>
-                            <td>@department.Name</td>
-                            <td><a class="btn btn-dark" asp-action="Edit" asp-controller="Department" asp-route-id="@department.DepartmentId">Edit</a></td>
-                            <td><a class="btn btn-danger" asp-action="Delete" asp-controller="Department" asp-route-id="@department.DepartmentId" onClick="return confirm('Are you sure you want to delete this department?')">Delete</a></td>
+                            <th scope="row">#@department.DepartmentId</th>
+                            <td>
+                                <div class="person-cell">
+                                    <span class="avatar">@initial</span>
+                                    <div>
+                                        <strong>@department.Name</strong>
+                                        <span class="subtext">Department profile</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="status-pill status-active"><i class="bi bi-check2-circle"></i> Ready</span>
+                            </td>
+                            <td class="text-end">
+                                <div class="d-inline-flex gap-2">
+                                    <a class="btn btn-outline-dark btn-icon" asp-action="Edit" asp-controller="Department" asp-route-id="@department.DepartmentId" aria-label="Edit department">
+                                        <i class="bi bi-pencil"></i>
+                                    </a>
+                                    <a class="btn btn-danger btn-icon" asp-action="Delete" asp-controller="Department" asp-route-id="@department.DepartmentId" aria-label="Delete department" onClick="return confirm('Are you sure you want to delete this department?')">
+                                        <i class="bi bi-trash"></i>
+                                    </a>
+                                </div>
+                            </td>
                         </tr>
                     }
-                </tbody>
-            </table>
-        </div>
+                }
+            </tbody>
+        </table>
     </div>
-</div>
+</section>

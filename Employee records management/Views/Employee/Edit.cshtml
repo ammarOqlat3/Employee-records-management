@@ -1,103 +1,112 @@
-﻿@model EmployeeViewModel
+@model EmployeeViewModel
 @{
-    ViewData["Title"] = "Edit employee details";
+    ViewData["Title"] = "Edit Employee";
 }
-<div class="  p-4 container">
 
-    <div class="row p-4">
-        <div class="col-md-12">
-            <h3>Edit employee details</h3>
-
-        </div>
+<section class="page-hero">
+    <div>
+        <span class="eyebrow">Profile Update</span>
+        <h2>Refine employee details.</h2>
+        <p>Update contact information, status, and department assignment while keeping the form readable and focused.</p>
     </div>
- 
-
-
-
-    <div class="row p-4">
-        <div class="col-md-6">
-            <form asp-action="Edit" asp-controller="Employee" method="post">
-                <input type="hidden" asp-for="EmployeeId" />
-                <div class="mb-3">
-
-                    <label for="FirstName"class="form-label fw-bold">First Name</label>
-                    <input asp-for="FirstName"type="text" class="form-control" />
-
-                </div>
-                <div class="mb-3">
-
-                    <label for="LastName" class="form-label fw-bold">Last Name</label>
-                    <input asp-for="LastName" type="text" class="form-control" />
-
-                </div>
-                <div class="mb-3">
-
-                    <label for="datetimepicker" class="form-label fw-bold">Date of Birth</label>
-                    <input asp-for="DateOfBirth" type="date" class="form-control" name="DateOfBirth" />
-
-                </div>
-                <div class="mb-3">
-
-                    <label for="Gender" class="form-label fw-bold">Gender</label>
-                    <div class="d-flex">
-                        <div class="form-check px-4">
-
-                            <input asp-for="Gender" class="form-check-input" value="male" type="radio" name="Gender">
-                            <label class="form-check-label fw-bold" for="Gender">Male</label>
-                         </div>
-                        <div class="form-check px-4">
-                            <input asp-for="Gender" class="form-check-input" value="female" type="radio" name="Gender">
-                            <label class="form-check-label fw-bold" for="Gender">Female</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="mb-3">
-                    <label for="Email" class="form-label fw-bold">Email</label>
-                    <input asp-for="Email" type="email" class="form-control">
-                </div>
-                <div class="mb-3">
-                    <label for="PhoneNumber" class="form-label fw-bold">Phone Number</label>
-                    <input asp-for="PhoneNumber" type="number" class="form-control">
-                </div>
-                <div class="mb-3">
-                    <label for="Address" class="form-label fw-bold">Address</label>
-                    <textarea asp-for="Address" class="form-control" rows="3"></textarea>
-                </div>
-
-                <div class="mb-3">
-                    <label class="form-label fw-bold">Please choose department</label>
-                    <select asp-for="DepartmentId" asp-items="ViewBag.Departments"></select>
-                </div>
-                <div class="mb-3">
-                    <div class="form-check">
-                        <input asp-for="IsActive" class="form-check-input" type="checkbox" id="isActive">
-                        <label class="form-check-label fw-bold" for="isActive">Mark as Active</label>
-                    </div>
-                    <span asp-validation-for="IsActive" class="text-danger"></span>
-                </div>
-                <button type="submit" class="btn btn-dark">Submit</button>
-
-
-
-
-
-
-
-
-
-
-
-
-
-            </form>
-
-
-
-
-
+    <div class="hero-metric">
+        <div>
+            <span class="metric-number">#@Model.EmployeeId</span>
+            <span class="metric-label">employee record</span>
         </div>
+        <p class="mb-0">@Model.FirstName @Model.LastName</p>
+    </div>
+</section>
+
+<section class="panel form-panel">
+    <div class="panel-header">
+        <div>
+            <span class="eyebrow">Edit Form</span>
+            <h3 class="panel-title">Employee details</h3>
+        </div>
+        <a asp-action="Index" class="btn btn-outline-dark">
+            <i class="bi bi-arrow-left"></i>
+            Back to employees
+        </a>
     </div>
 
+    <form asp-action="Edit" asp-controller="Employee" method="post" class="form-grid">
+        <input type="hidden" asp-for="EmployeeId" />
 
+        <div>
+            <label asp-for="FirstName" class="form-label">First Name</label>
+            <input asp-for="FirstName" type="text" class="form-control" />
+            <span asp-validation-for="FirstName" class="text-danger"></span>
+        </div>
 
-</div>
+        <div>
+            <label asp-for="LastName" class="form-label">Last Name</label>
+            <input asp-for="LastName" type="text" class="form-control" />
+            <span asp-validation-for="LastName" class="text-danger"></span>
+        </div>
+
+        <div>
+            <label asp-for="DateOfBirth" class="form-label">Date of Birth</label>
+            <input asp-for="DateOfBirth" type="date" class="form-control" />
+            <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+        </div>
+
+        <div>
+            <label class="form-label">Gender</label>
+            <div class="choice-row">
+                <label class="choice-box">
+                    <input asp-for="Gender" class="form-check-input" value="male" type="radio" />
+                    <span>Male</span>
+                </label>
+                <label class="choice-box">
+                    <input asp-for="Gender" class="form-check-input" value="female" type="radio" />
+                    <span>Female</span>
+                </label>
+            </div>
+            <span asp-validation-for="Gender" class="text-danger"></span>
+        </div>
+
+        <div>
+            <label asp-for="Email" class="form-label">Email</label>
+            <input asp-for="Email" type="email" class="form-control" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+
+        <div>
+            <label asp-for="PhoneNumber" class="form-label">Phone Number</label>
+            <input asp-for="PhoneNumber" type="tel" class="form-control" />
+            <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+        </div>
+
+        <div class="form-span-2">
+            <label asp-for="Address" class="form-label">Address</label>
+            <textarea asp-for="Address" class="form-control" rows="3"></textarea>
+            <span asp-validation-for="Address" class="text-danger"></span>
+        </div>
+
+        <div>
+            <label asp-for="DepartmentId" class="form-label">Department</label>
+            <select asp-for="DepartmentId" asp-items="ViewBag.departments" class="form-select">
+                <option value="">Select Department</option>
+            </select>
+            <span asp-validation-for="DepartmentId" class="text-danger"></span>
+        </div>
+
+        <div>
+            <label class="form-label">Status</label>
+            <label class="choice-box">
+                <input asp-for="IsActive" class="form-check-input" type="checkbox" />
+                <span>Mark as Active</span>
+            </label>
+            <span asp-validation-for="IsActive" class="text-danger"></span>
+        </div>
+
+        <div class="form-span-2 section-actions">
+            <button type="submit" class="btn btn-primary">
+                <i class="bi bi-check2"></i>
+                Save Changes
+            </button>
+            <a asp-action="Index" class="btn btn-outline-dark">Cancel</a>
+        </div>
+    </form>
+</section>

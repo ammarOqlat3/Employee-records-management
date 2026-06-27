@@ -46,6 +46,7 @@ namespace EmployeeRecordsManagement.ViewModels
 
         [ForeignKey("Department")]
         public int DepartmentId { get; set; } //Foreign Key
+        public string? DepartmentName { get; set; }
         public Department? Department { get; set; } //Reference navigation property
 
     }

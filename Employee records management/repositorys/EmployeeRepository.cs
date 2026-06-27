@@ -54,7 +54,8 @@ namespace EmployeeRecordsManagement.repositorys
                 PhoneNumber = e.PhoneNumber,
                 Address = e.Address,
                 IsActive = e.IsActive,
-                DepartmentId = e.DepartmentId
+                DepartmentId = e.DepartmentId,
+                DepartmentName = e.Department != null ? e.Department.Name : "Unassigned"
             });
 
             return employees;
@@ -76,6 +77,7 @@ namespace EmployeeRecordsManagement.repositorys
                 Address = employee.Address,
                 IsActive = employee.IsActive,
                 DepartmentId = employee.DepartmentId,
+                DepartmentName = employee.Department != null ? employee.Department.Name : "Unassigned"
             };
             return employeeViewModel;
         }

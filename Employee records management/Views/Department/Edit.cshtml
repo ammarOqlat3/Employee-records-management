@@ -1,26 +1,50 @@
-﻿@model DepartmentViewModel
+@model DepartmentViewModel
 @{
-    ViewData["Title"] = "Edit department details";
+    ViewData["Title"] = "Edit Department";
 }
 
-<div class="p-4 container">
-    <div class="row p-4">
-        <div class="col-md-12">
-            <h3>Edit department details</h3>
-        </div>
+<section class="page-hero">
+    <div>
+        <span class="eyebrow">Department Update</span>
+        <h2>Keep team names sharp.</h2>
+        <p>Edit department labels so records stay accurate and easy to scan across the employee directory.</p>
     </div>
-    <div class="row p-4">
-        <div class="col-md-6">
-            <form asp-action="Edit" asp-controller="Department" method="post">
-                <input hidden asp-for="DepartmentId"/>
-                 <div class="mb-3">
-                    <label for="Name" class="form-label fw-bold">Department Name</label>
-                    <input asp-for="Name" type="text" class="form-control">
-                    <span asp-validation-for="Name" class="text-danger"></span>
-                </div>
-                <button type="submit" class="btn btn-dark">Submit</button>
-            </form>
-           
+    <div class="hero-metric">
+        <div>
+            <span class="metric-number">#@Model.DepartmentId</span>
+            <span class="metric-label">department record</span>
         </div>
+        <p class="mb-0">@Model.Name</p>
     </div>
-</div>
+</section>
+
+<section class="panel form-panel">
+    <div class="panel-header">
+        <div>
+            <span class="eyebrow">Edit Form</span>
+            <h3 class="panel-title">Department details</h3>
+        </div>
+        <a asp-action="Index" class="btn btn-outline-dark">
+            <i class="bi bi-arrow-left"></i>
+            Back to departments
+        </a>
+    </div>
+
+    <form asp-action="Edit" asp-controller="Department" method="post" class="form-grid">
+        <input hidden asp-for="DepartmentId" />
+
+        <div class="form-span-2">
+            <label asp-for="Name" class="form-label">Department Name</label>
+            <input asp-for="Name" type="text" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+
+        <div class="form-span-2 section-actions">
+            <button type="submit" class="btn btn-primary">
+                <i class="bi bi-check2"></i>
+                Save Changes
+            </button>
+            <a asp-action="Index" class="btn btn-outline-dark">Cancel</a>
+        </div>
+    </form>
+</section>

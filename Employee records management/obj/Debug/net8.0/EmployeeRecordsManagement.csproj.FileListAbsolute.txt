@@ -69,10 +69,11 @@ C:\Users\ammar\OneDrive\Desktop\asp.netOrange\Employee records management\Employ
 C:\Users\ammar\OneDrive\Desktop\asp.netOrange\Employee records management\Employee records management\obj\Debug\net8.0\staticwebassets.build.json.cache
 C:\Users\ammar\OneDrive\Desktop\asp.netOrange\Employee records management\Employee records management\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\ammar\OneDrive\Desktop\asp.netOrange\Employee records management\Employee records management\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Users\ammar\OneDrive\Desktop\asp.netOrange\Employee records management\Employee records management\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\ammar\OneDrive\Desktop\asp.netOrange\Employee records management\Employee records management\obj\Debug\net8.0\Employee.FE49A3E1.Up2Date
 C:\Users\ammar\OneDrive\Desktop\asp.netOrange\Employee records management\Employee records management\obj\Debug\net8.0\EmployeeRecordsManagement.dll
 C:\Users\ammar\OneDrive\Desktop\asp.netOrange\Employee records management\Employee records management\obj\Debug\net8.0\refint\EmployeeRecordsManagement.dll
 C:\Users\ammar\OneDrive\Desktop\asp.netOrange\Employee records management\Employee records management\obj\Debug\net8.0\EmployeeRecordsManagement.pdb
 C:\Users\ammar\OneDrive\Desktop\asp.netOrange\Employee records management\Employee records management\obj\Debug\net8.0\EmployeeRecordsManagement.genruntimeconfig.cache
 C:\Users\ammar\OneDrive\Desktop\asp.netOrange\Employee records management\Employee records management\obj\Debug\net8.0\ref\EmployeeRecordsManagement.dll
+C:\Users\ammar\OneDrive\Desktop\asp.netOrange\Employee records management\Employee records management\obj\Debug\net8.0\EmployeeRecordsManagement.sourcelink.json
+C:\Users\ammar\OneDrive\Desktop\asp.netOrange\Employee records management\Employee records management\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
